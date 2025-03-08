@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://l4lilxukptjj"]
+
+[ext_resource type="Texture2D" uid="uid://wfvemducqkmk" path="res://Textures/decor/table.png" id="1_lfkog"]
+
+[node name="Table" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0.150043, 0.205914)
+scale = Vector2(0.3125, 0.3125)
+texture = ExtResource("1_lfkog")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(33.15, -16.2941)
+polygon = PackedVector2Array(-43.627, 23.9925, -41.7667, 23.9925, -41.7091, 12.0547, -24.2813, 12.125, -24.2336, 24.0022, -24.2336, 24.0022, -22.3734, 24.0022, -22.3982, 12.0719, -21.1332, 12.1215, -21.0836, 11.5014, -20.5131, 11.5014, -20.5106, 9.63792, -29.2614, 9.65107, -45.444, 9.67537, -45.479, 11.4994, -44.9178, 11.4643, -44.8827, 12.1308, -43.5498, 12.0957)

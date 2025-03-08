@@ -1,7 +1,7 @@
-[gd_scene load_steps=19 format=3 uid="uid://seofeu8n0j2r"]
+[gd_scene load_steps=19 format=3 uid="uid://csokrqiftxuw7"]
 
 [ext_resource type="Script" path="res://Scripts/PlayerMovement.gd" id="1_31cpv"]
-[ext_resource type="Texture2D" uid="uid://dvxapsah2miid" path="res://Textures/GooseSprite.png" id="2_8p1yl"]
+[ext_resource type="Texture2D" uid="uid://dhrqpob6u1cs1" path="res://Textures/GooseSprite.png" id="2_8p1yl"]
 [ext_resource type="AudioStream" uid="uid://djuksdvxe58ye" path="res://Audio/honk-sound.mp3" id="3_1tgqb"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0ycd2"]
