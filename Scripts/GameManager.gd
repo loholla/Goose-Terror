@@ -6,6 +6,7 @@ var skillDash = false
 var skillDJ = false
 var skillFlap = false
 var currentScene = "Level0"
+var numDeaths = 0
 
 var preloadedScenes := {
 	"MainMenu" : preload("res://Scenes/Levels/MainMenu.tscn"),
@@ -13,11 +14,12 @@ var preloadedScenes := {
 	"Level1" : preload("res://Scenes/Levels/Level1-Lovejoy.tscn"),
 	"Level2" : preload("res://Scenes/Levels/Level2-MUC.tscn"),
 	"Level3" : preload("res://Scenes/Levels/Level3-Peck.tscn"),
-	"Level4" : preload("res://Scenes/Levels/Level4-Sciences.tscn"),
+	"Level4a" : preload("res://Scenes/Levels/Level4-ScienceWest.tscn"),
+	"Level4b" : preload("res://Scenes/Levels/Level4-ScienceEast.tscn"),
 	"Level5" : preload("res://Scenes/Levels/Level5-Engineering.tscn")
 }
 
-var SceneList := ["MainMenu", "Level0", "Level1", "Level2", "Level3", "Level4", "Level5"]
+var SceneList := ["MainMenu", "Level0", "Level1", "Level2", "Level3", "Level4a", "Level4b", "Level5"]
 
 func loadScene(sceneName: String):
 	var newScene = preloadedScenes[sceneName]
@@ -45,4 +47,5 @@ func onLevelComplete(levelName: String):
 
 func gooseDied():
 	print("Goose died")
+	numDeaths += 1
 	loadScene(currentScene)
