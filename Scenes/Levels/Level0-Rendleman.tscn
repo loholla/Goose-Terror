@@ -1,12 +1,3 @@
-[gd_scene load_steps=3 format=3 uid="uid://bvkq62vlhfkj7"]
-
-[ext_resource type="PackedScene" uid="uid://dvs61dly0v7hn" path="res://Scenes/Misc/LevelSprites.tscn" id="1_34fwe"]
-[ext_resource type="PackedScene" uid="uid://csokrqiftxuw7" path="res://Scenes/Characters/Player.tscn" id="2_flcyn"]
+[gd_scene format=3 uid="uid://cfa7s3l5rdbrd"]
 
 [node name="Level0-rendleman" type="Node2D"]
-
-[node name="LevelSprites" parent="." instance=ExtResource("1_34fwe")]
-layer_0/tile_data = PackedInt32Array(0, 65536, 7, 1, 65536, 7, 2, 65536, 7, 3, 65536, 7, 4, 65536, 7, 5, 65536, 7, 6, 65536, 7, 7, 65536, 7, 8, 65536, 7, 9, 65536, 7)
-
-[node name="CharacterBody2D" parent="." instance=ExtResource("2_flcyn")]
-position = Vector2(49, -30)
