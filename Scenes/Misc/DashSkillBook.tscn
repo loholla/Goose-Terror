@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://cowu5pevyq4am"]
+
+[ext_resource type="Script" path="res://Scripts/DaskSkillBook.gd" id="1_6th8m"]
+[ext_resource type="Texture2D" uid="uid://uy3i43c5v241" path="res://Textures/SkillBook.png" id="2_p4t3f"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_segu0"]
+
+[node name="DashSkillBook" type="Node2D"]
+script = ExtResource("1_6th8m")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_p4t3f")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_segu0")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

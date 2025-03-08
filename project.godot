@@ -15,6 +15,10 @@ run/main_scene="res://Scenes/Characters/Player.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+GameManager="*res://Scripts/GameManager.gd"
+
 [input]
 
 Up={
@@ -50,6 +54,8 @@ Bite={
 [layer_names]
 
 2d_physics/layer_1="Level"
+2d_physics/layer_2="Enemies"
+2d_physics/layer_3="Interactions"
 
 [rendering]
 

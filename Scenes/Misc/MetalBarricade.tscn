@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://c6ii3efcots07"]
+
+[ext_resource type="Texture2D" uid="uid://cb1r0qm0vidg2" path="res://Textures/MetalBarricade.png" id="1_t8i60"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8mq31"]
+size = Vector2(16, 32)
+
+[node name="MetalBarricade" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_t8i60")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_8mq31")

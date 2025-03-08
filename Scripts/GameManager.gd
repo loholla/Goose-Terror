@@ -1,5 +1,11 @@
 extends Node
 
+var biting = false
+var score = 0
+var skillDash = false
+var skillDJ = false
+var skillFlap = false
+
 var preloadedScenes := {
 	"MainMenu" : preload("res://Scenes/Levels/MainMenu.tscn"),
 	"Level0" : preload("res://Scenes/Levels/Level0-Rendleman.tscn"),

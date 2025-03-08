@@ -1,0 +1,93 @@
+[gd_scene load_steps=12 format=3 uid="uid://pv1n34mdfof8"]
+
+[ext_resource type="Script" path="res://Scripts/People.gd" id="1_gk65x"]
+[ext_resource type="Texture2D" uid="uid://cphaq6jrukm0u" path="res://Textures/Person1d.png" id="2_mh0mc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_navcj"]
+atlas = ExtResource("2_mh0mc")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4xt3p"]
+atlas = ExtResource("2_mh0mc")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kvpsn"]
+atlas = ExtResource("2_mh0mc")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xxs35"]
+atlas = ExtResource("2_mh0mc")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5qpfd"]
+atlas = ExtResource("2_mh0mc")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f4rsw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_navcj")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4xt3p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kvpsn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xxs35")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5qpfd")
+}],
+"loop": true,
+"name": &"Moving",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rvrms"]
+size = Vector2(9, 30)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xjnv1"]
+radius = 72.0069
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ollhi"]
+size = Vector2(20, 30)
+
+[node name="Person1d" type="CharacterBody2D"]
+script = ExtResource("1_gk65x")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_f4rsw")
+animation = &"Idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 9)
+shape = SubResource("RectangleShape2D_rvrms")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 9)
+shape = SubResource("CircleShape2D_xjnv1")
+
+[node name="BiteArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BiteArea"]
+position = Vector2(0, 9)
+shape = SubResource("RectangleShape2D_ollhi")
+
+[node name="Bit-Timer" type="Timer" parent="."]
+wait_time = 0.05
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="BiteArea" to="." method="_on_bite_area_body_entered"]
+[connection signal="body_exited" from="BiteArea" to="." method="_on_bite_area_body_exited"]
+[connection signal="timeout" from="Bit-Timer" to="." method="_on_bit_timer_timeout"]

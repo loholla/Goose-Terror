@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-const SPEED = 200.0
+const SPEED = 100.0
 const JUMP_VELOCITY = -300.0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -21,17 +21,16 @@ func _physics_process(delta):
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var dir = Input.get_axis("Left","Right")
-	if dir == 1 and !biting:
+	if dir == 1 and !GameManager.biting:
 		$AnimatedSprite2D.flip_h = false
 		$AnimatedSprite2D.play("Walking")
-	elif dir == -1 and !biting:
+	elif dir == -1 and !GameManager.biting:
 		$AnimatedSprite2D.flip_h = true
 		$AnimatedSprite2D.play("Walking")
-	elif !biting:
+	elif !GameManager.biting:
 		$AnimatedSprite2D.play("Idle")
 		
 	var direction = Input.get_axis("Left", "Right")
-	$AnimatedSprite2D
 	if direction:
 		velocity.x = direction * SPEED
 	else:
@@ -48,9 +47,12 @@ func _physics_process(delta):
 	move_and_slide()
 
 func BiteTimer():
-	biting = true
+	GameManager.biting = true
 	$BiteTime.start()
 
 
 func _on_bite_time_timeout():
-	biting = false
+	GameManager.biting = false
+
+func Player():
+	pass

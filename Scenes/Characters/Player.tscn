@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://seofeu8n0j2r"]
+[gd_scene load_steps=18 format=3 uid="uid://seofeu8n0j2r"]
 
 [ext_resource type="Script" path="res://Scripts/PlayerMovement.gd" id="1_31cpv"]
 [ext_resource type="Texture2D" uid="uid://dvxapsah2miid" path="res://Textures/GooseSprite.png" id="2_8p1yl"]
@@ -7,17 +7,21 @@
 atlas = ExtResource("2_8p1yl")
 region = Rect2(0, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_xtrqx"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_kxlvj"]
 atlas = ExtResource("2_8p1yl")
 region = Rect2(0, 32, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_o3x1e"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_27x24"]
 atlas = ExtResource("2_8p1yl")
 region = Rect2(32, 32, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_y02ok"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_jbwo8"]
 atlas = ExtResource("2_8p1yl")
 region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_56wuo"]
+atlas = ExtResource("2_8p1yl")
+region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pfh3f"]
 atlas = ExtResource("2_8p1yl")
@@ -59,21 +63,24 @@ animations = [{
 }],
 "loop": true,
 "name": &"Idle",
-"speed": 5.0
+"speed": 3.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_xtrqx")
+"texture": SubResource("AtlasTexture_kxlvj")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_o3x1e")
+"texture": SubResource("AtlasTexture_27x24")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_y02ok")
+"texture": SubResource("AtlasTexture_jbwo8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_56wuo")
 }],
 "loop": false,
 "name": &"StationaryBite",
-"speed": 5.0
+"speed": 3.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -90,7 +97,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Walking",
-"speed": 5.0
+"speed": 3.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -107,7 +114,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"WalkingBite",
-"speed": 5.0
+"speed": 3.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jarr7"]
@@ -119,13 +126,15 @@ script = ExtResource("1_31cpv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_lgieg")
-animation = &"StationaryBite"
+animation = &"Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 5)
 shape = SubResource("CapsuleShape2D_jarr7")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -77)
+zoom = Vector2(3, 3)
 
 [node name="BiteTime" type="Timer" parent="."]
 
