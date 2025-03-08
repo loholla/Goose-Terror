@@ -17,3 +17,25 @@ var preloadedScenes := {
 }
 
 var SceneList := ["MainMenu", "Level0", "Level1", "Level2", "Level3", "Level4", "Level5"]
+
+func loadScene(sceneName: String):
+	var newScene = preloadedScenes[sceneName]
+	
+	if newScene == null:
+		newScene = preloadedScenes["MainMenu"]
+	
+	get_tree().change_scene_to_packed(newScene)
+
+func getNextScene(curSceneName: String) -> String:
+	print ("Getting", curSceneName)
+	var where := SceneList.find(curSceneName)
+	print(where)
+	if where == -1 or where == SceneList.size() - 1:
+		return "MainMenu"
+	print(SceneList[where+1])
+	return SceneList[where+1]
+
+func onLevelComplete(levelName: String):
+	print(levelName)
+	var nextLevel := getNextScene(levelName)
+	loadScene(nextLevel)
