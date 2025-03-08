@@ -20,12 +20,11 @@ func _physics_process(delta):
 		velocity.y += gravity * delta
 	
 	if player != null:
-		direction = (player.position.x + self.position.x)
-		if direction > 1:
+		if player.position.x < self.position.x:
 			$AnimatedSprite2D.flip_h = true
 			$AnimatedSprite2D.play("Moving")
 			dir = 1
-		elif direction < 1:
+		elif player.position.x > self.position.x:
 			$AnimatedSprite2D.flip_h = false
 			$AnimatedSprite2D.play("Moving")
 			dir = -1
