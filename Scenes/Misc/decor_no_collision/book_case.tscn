@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://b2mcxg3snepm"]
+
+[ext_resource type="Texture2D" uid="uid://bnawwub0n0xp6" path="res://Textures/decor/book_case.png" id="1_g3ghg"]
+
+[node name="BookCase" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_g3ghg")

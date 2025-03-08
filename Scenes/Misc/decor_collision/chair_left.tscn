@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://ehf1f6betbdd"]
+
+[ext_resource type="Texture2D" uid="uid://c8my7yrc33mcc" path="res://Textures/decor/chair_left.png" id="1_6ojfa"]
+
+[node name="ChairLeft" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.333333, 0.333333)
+texture = ExtResource("1_6ojfa")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-4, 8, -4.0088, 0.665558, -3.34234, 0.700635, -3.30726, -0.0184419, 2, 0, 2.01759, -6.68467, 3.99686, -6.6701, 4, 8, 2, 8, 1.99083, 2.6598, -2.00548, 2.6598, -2, 8)

@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://bfka7rf186oe6"]
+
+[ext_resource type="Texture2D" uid="uid://bgmxfb8saa1c4" path="res://chair_right.png" id="1_416c2"]
+
+[node name="RigidBody2D" type="RigidBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -8)
+scale = Vector2(0.416667, 0.416667)
+texture = ExtResource("1_416c2")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-5, 2, -5, -16, -3, -16, -3, -8, 4, -8, 5, -7, 5, 2, 3, 2, 3, -5, -3, -5, -3, 2)
