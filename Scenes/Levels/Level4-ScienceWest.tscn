@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cfn8ruhtvhqqp"]
+[gd_scene load_steps=10 format=3 uid="uid://cfn8ruhtvhqqp"]
 
 [ext_resource type="PackedScene" uid="uid://dvs61dly0v7hn" path="res://Scenes/Misc/LevelSprites.tscn" id="1_7iguw"]
 [ext_resource type="PackedScene" uid="uid://c6ii3efcots07" path="res://Scenes/Misc/MetalBarricade.tscn" id="2_0s700"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://c0ovdowyxmv6f" path="res://Scenes/Misc/WoodBarricade.tscn" id="6_nmfm0"]
 [ext_resource type="PackedScene" uid="uid://cowu5pevyq4am" path="res://Scenes/Misc/DashSkillBook.tscn" id="7_1q3y6"]
 [ext_resource type="PackedScene" uid="uid://seofeu8n0j2r" path="res://Scenes/Characters/Player.tscn" id="8_30llw"]
+[ext_resource type="PackedScene" path="res://Scenes/Misc/level_fin.tscn" id="9_c2v76"]
 
 [node name="Level3-sciences" type="Node2D"]
 
@@ -118,3 +119,6 @@ position = Vector2(904, -112)
 
 [node name="Player" parent="." instance=ExtResource("8_30llw")]
 position = Vector2(11, -16)
+
+[node name="LevelFin" parent="." instance=ExtResource("9_c2v76")]
+position = Vector2(910, -112)
