@@ -135,7 +135,11 @@ shape = SubResource("CapsuleShape2D_jarr7")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -77)
+offset = Vector2(0, 10)
 zoom = Vector2(3, 3)
+limit_bottom = 1
+position_smoothing_enabled = true
+drag_vertical_enabled = true
 
 [node name="BiteTime" type="Timer" parent="."]
 
