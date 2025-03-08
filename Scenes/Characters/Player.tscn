@@ -71,7 +71,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_y02ok")
 }],
-"loop": true,
+"loop": false,
 "name": &"StationaryBite",
 "speed": 5.0
 }, {
@@ -105,7 +105,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_81d2i")
 }],
-"loop": true,
+"loop": false,
 "name": &"WalkingBite",
 "speed": 5.0
 }]
@@ -119,7 +119,7 @@ script = ExtResource("1_31cpv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_lgieg")
-animation = &"WalkingBite"
+animation = &"StationaryBite"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 5)
@@ -127,4 +127,6 @@ shape = SubResource("CapsuleShape2D_jarr7")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
-[node name="Timer" type="Timer" parent="."]
+[node name="BiteTime" type="Timer" parent="."]
+
+[connection signal="timeout" from="BiteTime" to="." method="_on_bite_time_timeout"]
