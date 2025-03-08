@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cfa7s3l5rdbrd"]
+[gd_scene load_steps=6 format=3 uid="uid://cfa7s3l5rdbrd"]
 
 [ext_resource type="PackedScene" uid="uid://dvs61dly0v7hn" path="res://Scenes/Misc/LevelSprites.tscn" id="1_34fwe"]
 [ext_resource type="PackedScene" uid="uid://c762xvilww2a8" path="res://Scenes/Misc/Door.tscn" id="2_e5106"]
 [ext_resource type="PackedScene" uid="uid://seofeu8n0j2r" path="res://Scenes/Characters/Player.tscn" id="3_ntrbv"]
 [ext_resource type="PackedScene" uid="uid://pp03ulyo3ikr" path="res://Scenes/Misc/Barrel.tscn" id="4_m1qk7"]
+[ext_resource type="PackedScene" uid="uid://c178v4bjfeu2o" path="res://Scenes/Misc/SmallToxicVat.tscn" id="5_fm24u"]
 
 [node name="Level0-rendleman" type="Node2D"]
 
@@ -62,3 +63,6 @@ position = Vector2(412, -13)
 
 [node name="Player" parent="." instance=ExtResource("3_ntrbv")]
 position = Vector2(11, -16)
+
+[node name="SmallToxicVat" parent="." instance=ExtResource("5_fm24u")]
+position = Vector2(507, -14)
