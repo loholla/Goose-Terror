@@ -5,6 +5,7 @@ var score = 0
 var skillDash = false
 var skillDJ = false
 var skillFlap = false
+var currentScene = "Level0"
 
 var preloadedScenes := {
 	"MainMenu" : preload("res://Scenes/Levels/MainMenu.tscn"),
@@ -23,7 +24,7 @@ func loadScene(sceneName: String):
 	
 	if newScene == null:
 		newScene = preloadedScenes["MainMenu"]
-	
+		
 	get_tree().change_scene_to_packed(newScene)
 
 func getNextScene(curSceneName: String) -> String:
@@ -31,11 +32,17 @@ func getNextScene(curSceneName: String) -> String:
 	var where := SceneList.find(curSceneName)
 	print(where)
 	if where == -1 or where == SceneList.size() - 1:
+		currentScene = "MainMenu"
 		return "MainMenu"
 	print(SceneList[where+1])
+	currentScene = SceneList[where+1]
 	return SceneList[where+1]
 
 func onLevelComplete(levelName: String):
 	print(levelName)
 	var nextLevel := getNextScene(levelName)
 	loadScene(nextLevel)
+
+func gooseDied():
+	print("Goose died")
+	loadScene(currentScene)

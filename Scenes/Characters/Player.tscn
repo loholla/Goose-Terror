@@ -1,7 +1,8 @@
-[gd_scene load_steps=18 format=3 uid="uid://seofeu8n0j2r"]
+[gd_scene load_steps=19 format=3 uid="uid://seofeu8n0j2r"]
 
 [ext_resource type="Script" path="res://Scripts/PlayerMovement.gd" id="1_31cpv"]
 [ext_resource type="Texture2D" uid="uid://dvxapsah2miid" path="res://Textures/GooseSprite.png" id="2_8p1yl"]
+[ext_resource type="AudioStream" uid="uid://djuksdvxe58ye" path="res://Audio/honk-sound.mp3" id="3_1tgqb"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0ycd2"]
 atlas = ExtResource("2_8p1yl")
@@ -134,7 +135,11 @@ shape = SubResource("CapsuleShape2D_jarr7")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -77)
+offset = Vector2(0, 10)
 zoom = Vector2(3, 3)
+limit_bottom = 1
+position_smoothing_enabled = true
+drag_vertical_enabled = true
 
 [node name="BiteTime" type="Timer" parent="."]
 
@@ -148,7 +153,15 @@ one_shot = true
 
 [node name="BiteCooldown" type="Timer" parent="."]
 
+[node name="Honk" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_1tgqb")
+
+[node name="HonkDelay" type="Timer" parent="."]
+wait_time = 0.25
+one_shot = true
+
 [connection signal="timeout" from="BiteTime" to="." method="_on_bite_time_timeout"]
 [connection signal="timeout" from="DashTimer" to="." method="_on_dash_timer_timeout"]
 [connection signal="timeout" from="DashCooldown" to="." method="_on_dash_cooldown_timeout"]
 [connection signal="timeout" from="BiteCooldown" to="." method="_on_bite_cooldown_timeout"]
+[connection signal="timeout" from="HonkDelay" to="." method="_on_honk_delay_timeout"]
