@@ -54,6 +54,7 @@ func _physics_process(delta):
 	
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT): # BITE. CHOMP. HONK
 		if canBite:
+			$HonkDelay.start()
 			canBite = false
 			if direction == 0:
 				$AnimatedSprite2D.play("StationaryBite")
@@ -94,3 +95,7 @@ func _on_dash_cooldown_timeout():
 
 func _on_bite_cooldown_timeout():
 	canBite = true
+
+
+func _on_honk_delay_timeout():
+	$Honk.play()
