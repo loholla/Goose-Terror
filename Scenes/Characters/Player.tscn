@@ -1,6 +1,6 @@
 [gd_scene load_steps=17 format=3 uid="uid://csokrqiftxuw7"]
 
-[ext_resource type="Script" path="res://PlayerMovement.gd" id="1_378vq"]
+[ext_resource type="Script" path="res://Scripts/PlayerMovement.gd" id="1_378vq"]
 [ext_resource type="Texture2D" uid="uid://dhrqpob6u1cs1" path="res://Textures/GooseSprite.png" id="2_8p1yl"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xvmn0"]
@@ -71,7 +71,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_jkfhq")
 }],
-"loop": true,
+"loop": false,
 "name": &"StationaryBite",
 "speed": 5.0
 }, {
@@ -105,7 +105,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_nh25t")
 }],
-"loop": true,
+"loop": false,
 "name": &"WalkingBite",
 "speed": 5.0
 }]
@@ -118,7 +118,7 @@ script = ExtResource("1_378vq")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_8n4l2")
-animation = &"Idle"
+animation = &"Walking"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 4)
@@ -127,3 +127,7 @@ shape = SubResource("CapsuleShape2D_26j2q")
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -64)
 zoom = Vector2(3, 3)
+
+[node name="BiteTime" type="Timer" parent="."]
+
+[connection signal="timeout" from="BiteTime" to="." method="_on_bite_time_timeout"]
