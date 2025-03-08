@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cfa7s3l5rdbrd"]
+[gd_scene load_steps=5 format=3 uid="uid://cfa7s3l5rdbrd"]
 
 [ext_resource type="PackedScene" uid="uid://dvs61dly0v7hn" path="res://Scenes/Misc/LevelSprites.tscn" id="1_34fwe"]
 [ext_resource type="PackedScene" uid="uid://c762xvilww2a8" path="res://Scenes/Misc/Door.tscn" id="2_e5106"]
 [ext_resource type="PackedScene" uid="uid://seofeu8n0j2r" path="res://Scenes/Characters/Player.tscn" id="3_ntrbv"]
+[ext_resource type="PackedScene" uid="uid://pp03ulyo3ikr" path="res://Scenes/Misc/Barrel.tscn" id="4_m1qk7"]
 
 [node name="Level0-rendleman" type="Node2D"]
 
@@ -17,3 +18,12 @@ position = Vector2(11, -16)
 
 [node name="Door2" parent="." instance=ExtResource("2_e5106")]
 position = Vector2(-8, -16)
+
+[node name="Barrel3" parent="." instance=ExtResource("4_m1qk7")]
+position = Vector2(199, -32)
+
+[node name="Barrel" parent="." instance=ExtResource("4_m1qk7")]
+position = Vector2(190, -13)
+
+[node name="Barrel2" parent="." instance=ExtResource("4_m1qk7")]
+position = Vector2(208, -13)
