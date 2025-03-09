@@ -30,6 +30,14 @@ offset_right = 70.76
 offset_bottom = -14.0
 text = "Movement
    A and D"
+editable = false
+context_menu_enabled = false
+shortcut_keys_enabled = false
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+virtual_keyboard_enabled = false
+middle_mouse_paste_enabled = false
 
 [node name="TextEdit2" type="TextEdit" parent="Control"]
 layout_mode = 0
@@ -39,6 +47,14 @@ offset_right = 438.0
 offset_bottom = -65.0
 text = "Jump
    W"
+editable = false
+context_menu_enabled = false
+shortcut_keys_enabled = false
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+virtual_keyboard_enabled = false
+middle_mouse_paste_enabled = false
 
 [node name="TextEdit3" type="TextEdit" parent="Control"]
 layout_mode = 0
@@ -48,6 +64,14 @@ offset_right = 809.0
 offset_bottom = -10.0
 text = "Run into the door
 to proceed ->"
+editable = false
+context_menu_enabled = false
+shortcut_keys_enabled = false
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+virtual_keyboard_enabled = false
+middle_mouse_paste_enabled = false
 
 [node name="BookCase" parent="." instance=ExtResource("2_i5pwh")]
 position = Vector2(496, -23)
