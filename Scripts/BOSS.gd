@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 var player = null
 var jumpChance
+var timer = false
 
 const SPEED = 50.0
 const JUMP_VELOCITY = -300.0
@@ -31,7 +32,9 @@ func _physics_process(delta):
 
 func _on_player_detector_body_entered(body):
 	if body.has_method("Player"):
-		$Timer.start()
+		if !timer:
+			$Timer.start()
+			timer = true
 		player = body
 
 
