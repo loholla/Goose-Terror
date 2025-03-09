@@ -1,16 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://0v2iv8la60h0"]
+[gd_scene load_steps=5 format=3 uid="uid://0v2iv8la60h0"]
 
-[ext_resource type="Texture2D" uid="uid://dwqgl2dxm2w2d" path="res://Textures/Boss.jpg" id="1_73mqw"]
 [ext_resource type="Script" path="res://Scripts/BOSS.gd" id="1_glopq"]
+[ext_resource type="Texture2D" uid="uid://dubt802kljftd" path="res://Textures/Boss.png" id="2_80re8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pon3y"]
 size = Vector2(6, 6)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qil41"]
-size = Vector2(527, 515)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_xq01t"]
-size = Vector2(240, 262)
+size = Vector2(1172, 515)
 
 [node name="Boss" type="CharacterBody2D"]
 script = ExtResource("1_glopq")
@@ -18,22 +15,26 @@ script = ExtResource("1_glopq")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(3.05176e-05, 0)
 scale = Vector2(0.161668, 0.161668)
-texture = ExtResource("1_73mqw")
+texture = ExtResource("2_80re8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 126)
+position = Vector2(0, 62)
 shape = SubResource("RectangleShape2D_pon3y")
 
 [node name="PlayerDetector" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetector"]
-position = Vector2(0.5, -128.5)
+position = Vector2(64, -193)
 shape = SubResource("RectangleShape2D_qil41")
 
 [node name="PlayerDies" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDies"]
-shape = SubResource("RectangleShape2D_xq01t")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PlayerDies"]
+polygon = PackedVector2Array(43, 64, 43, 24, 31, 19, 32, -7, 27, -31, 18, -41, 5, -46, 0, -46, -16, -39, -24, -26, -28, -16, -26, -3, -19, 12, -15, 22, -43, 33, -43, 64)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 30.0
 
 [connection signal="body_entered" from="PlayerDetector" to="." method="_on_player_detector_body_entered"]
 [connection signal="body_entered" from="PlayerDies" to="." method="_on_player_dies_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
