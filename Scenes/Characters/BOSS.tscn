@@ -18,7 +18,7 @@ scale = Vector2(0.161668, 0.161668)
 texture = ExtResource("2_80re8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 62)
+position = Vector2(0, 61)
 shape = SubResource("RectangleShape2D_pon3y")
 
 [node name="PlayerDetector" type="Area2D" parent="."]
@@ -33,7 +33,7 @@ shape = SubResource("RectangleShape2D_qil41")
 polygon = PackedVector2Array(43, 64, 43, 24, 31, 19, 32, -7, 27, -31, 18, -41, 5, -46, 0, -46, -16, -39, -24, -26, -28, -16, -26, -3, -19, 12, -15, 22, -43, 33, -43, 64)
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 30.0
+wait_time = 15.0
 
 [connection signal="body_entered" from="PlayerDetector" to="." method="_on_player_detector_body_entered"]
 [connection signal="body_entered" from="PlayerDies" to="." method="_on_player_dies_body_entered"]

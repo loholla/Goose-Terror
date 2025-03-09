@@ -51,7 +51,7 @@ texture = ExtResource("3_t5eau")
 position = Vector2(197, -82)
 scale = Vector2(5.125, 5.125)
 sprite_frames = SubResource("SpriteFrames_scs0g")
-frame_progress = 0.303094
+frame_progress = 0.220486
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
