@@ -18,6 +18,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="TextEdit" type="TextEdit" parent="Control"]
+layout_mode = 0
 offset_left = -143.0
 offset_top = -182.0
 offset_right = 143.0
