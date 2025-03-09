@@ -8,14 +8,14 @@
 [ext_resource type="PackedScene" uid="uid://l4lilxukptjj" path="res://Scenes/Misc/decor_collision/table.tscn" id="6_uvh8l"]
 [ext_resource type="PackedScene" uid="uid://bfl52tshju2ev" path="res://Scenes/Misc/decor_collision/chair_right.tscn" id="7_ng5t8"]
 [ext_resource type="PackedScene" uid="uid://ehf1f6betbdd" path="res://Scenes/Misc/decor_collision/chair_left.tscn" id="8_m318b"]
-[ext_resource type="PackedScene" uid="uid://qmqo68fuc6wk" path="res://Scenes/Characters/Person1b.tscn" id="9_kqtow"]
-[ext_resource type="PackedScene" uid="uid://dsfdclt3oec8" path="res://Scenes/Characters/pets.tscn" id="11_3fes6"]
-[ext_resource type="PackedScene" uid="uid://pv1n34mdfof8" path="res://Scenes/Characters/Person1d.tscn" id="11_ku0dk"]
-[ext_resource type="PackedScene" uid="uid://c6ii3efcots07" path="res://Scenes/Misc/MetalBarricade.tscn" id="12_vapbm"]
-[ext_resource type="PackedScene" uid="uid://pp03ulyo3ikr" path="res://Scenes/Misc/Barrel.tscn" id="13_mtdsf"]
-[ext_resource type="PackedScene" uid="uid://wypkow7i3ehx" path="res://Scenes/Characters/Person2b.tscn" id="14_r8w5k"]
-[ext_resource type="PackedScene" uid="uid://b5184xqcm2io5" path="res://Scenes/Characters/Person2d.tscn" id="15_p12sv"]
-[ext_resource type="PackedScene" uid="uid://dhk3xsbhlautn" path="res://Scenes/Misc/level_fin.tscn" id="16_2x2p1"]
+[ext_resource type="PackedScene" path="res://Scenes/Characters/Person1b.tscn" id="9_kqtow"]
+[ext_resource type="PackedScene" path="res://Scenes/Characters/pets.tscn" id="11_3fes6"]
+[ext_resource type="PackedScene" path="res://Scenes/Characters/Person1d.tscn" id="11_ku0dk"]
+[ext_resource type="PackedScene" path="res://Scenes/Misc/MetalBarricade.tscn" id="12_vapbm"]
+[ext_resource type="PackedScene" path="res://Scenes/Misc/Barrel.tscn" id="13_mtdsf"]
+[ext_resource type="PackedScene" path="res://Scenes/Characters/Person2b.tscn" id="14_r8w5k"]
+[ext_resource type="PackedScene" path="res://Scenes/Characters/Person2d.tscn" id="15_p12sv"]
+[ext_resource type="PackedScene" uid="uid://b2mcxg3snepm" path="res://Scenes/Misc/decor_no_collision/book_case.tscn" id="16_yte71"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_15smf"]
 size = Vector2(37.9701, 351.535)
@@ -194,15 +194,15 @@ position = Vector2(645.431, -466.966)
 [node name="Person1b3" parent="." instance=ExtResource("9_kqtow")]
 position = Vector2(590.195, -462.512)
 
-[node name="Player" parent="." instance=ExtResource("1_1c1fv")]
-position = Vector2(-197.354, -32.6449)
 
-[node name="LevelFin" parent="." instance=ExtResource("16_2x2p1")]
-position = Vector2(-28, -453)
-rotation = -0.47822
-scale = Vector2(3, 3)
+[node name="BookCase" parent="." instance=ExtResource("16_yte71")]
+position = Vector2(242.108, -217.611)
 
-[node name="LevelFin2" parent="." instance=ExtResource("16_2x2p1")]
-position = Vector2(-30, -515)
-rotation = -2.51327
-scale = Vector2(3, 3)
+[node name="BookCase2" parent="." instance=ExtResource("16_yte71")]
+position = Vector2(570.899, -217.611)
+
+[node name="BookCase3" parent="." instance=ExtResource("16_yte71")]
+position = Vector2(731.93, -443.813)
+
+[node name="BookCase4" parent="." instance=ExtResource("16_yte71")]
+position = Vector2(662.556, -443.392)
