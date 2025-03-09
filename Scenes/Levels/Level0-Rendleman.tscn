@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://ehf1f6betbdd" path="res://Scenes/Misc/decor_collision/chair_left.tscn" id="5_qg41p"]
 [ext_resource type="PackedScene" uid="uid://bfl52tshju2ev" path="res://Scenes/Misc/decor_collision/chair_right.tscn" id="6_ksvu8"]
 [ext_resource type="PackedScene" uid="uid://l4lilxukptjj" path="res://Scenes/Misc/decor_collision/table.tscn" id="7_hvqh0"]
-[ext_resource type="PackedScene" path="res://Scenes/Misc/level_fin.tscn" id="8_gyql7"]
+[ext_resource type="PackedScene" uid="uid://dhk3xsbhlautn" path="res://Scenes/Misc/level_fin.tscn" id="8_gyql7"]
 
 [node name="Level0-rendleman" type="Node2D"]
 

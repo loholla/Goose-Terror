@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://wypkow7i3ehx" path="res://Scenes/Characters/Person2b.tscn" id="7_cq6jh"]
 [ext_resource type="PackedScene" uid="uid://c0ovdowyxmv6f" path="res://Scenes/Misc/WoodBarricade.tscn" id="8_3udkc"]
 [ext_resource type="PackedScene" uid="uid://pp03ulyo3ikr" path="res://Scenes/Misc/Barrel.tscn" id="9_kiy48"]
-[ext_resource type="PackedScene" path="res://Scenes/Misc/level_fin.tscn" id="10_trn37"]
+[ext_resource type="PackedScene" uid="uid://dhk3xsbhlautn" path="res://Scenes/Misc/level_fin.tscn" id="10_trn37"]
 
 [node name="Level1-lovejoy" type="Node2D"]
 

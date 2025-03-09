@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://c0ovdowyxmv6f" path="res://Scenes/Misc/WoodBarricade.tscn" id="6_nmfm0"]
 [ext_resource type="PackedScene" uid="uid://cowu5pevyq4am" path="res://Scenes/Misc/DashSkillBook.tscn" id="7_1q3y6"]
 [ext_resource type="PackedScene" uid="uid://seofeu8n0j2r" path="res://Scenes/Characters/Player.tscn" id="8_30llw"]
-[ext_resource type="PackedScene" path="res://Scenes/Misc/level_fin.tscn" id="9_c2v76"]
+[ext_resource type="PackedScene" uid="uid://dhk3xsbhlautn" path="res://Scenes/Misc/level_fin.tscn" id="9_c2v76"]
 
 [node name="Level3-sciences" type="Node2D"]
 
