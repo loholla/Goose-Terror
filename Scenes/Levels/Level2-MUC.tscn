@@ -29,9 +29,6 @@ position = Vector2(236, -241)
 [node name="Door" parent="." instance=ExtResource("5_imhh8")]
 position = Vector2(8, -208)
 
-[node name="Pets" parent="." instance=ExtResource("6_r7eaa")]
-position = Vector2(65, -211)
-
 [node name="Pets2" parent="." instance=ExtResource("6_r7eaa")]
 position = Vector2(564, -19)
 
@@ -41,14 +38,8 @@ position = Vector2(584, -211)
 [node name="Pets4" parent="." instance=ExtResource("6_r7eaa")]
 position = Vector2(827, -32)
 
-[node name="Pets5" parent="." instance=ExtResource("6_r7eaa")]
-position = Vector2(980, -23)
-
 [node name="Pets6" parent="." instance=ExtResource("6_r7eaa")]
 position = Vector2(1123, -34)
-
-[node name="Pets7" parent="." instance=ExtResource("6_r7eaa")]
-position = Vector2(1302, -33)
 
 [node name="Pets8" parent="." instance=ExtResource("6_r7eaa")]
 position = Vector2(1431, -37)
