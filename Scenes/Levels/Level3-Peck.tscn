@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dbw4ymasb01nd"]
+[gd_scene load_steps=18 format=3 uid="uid://dbw4ymasb01nd"]
 
 [ext_resource type="PackedScene" uid="uid://csokrqiftxuw7" path="res://Scenes/Characters/Player.tscn" id="1_1c1fv"]
 [ext_resource type="PackedScene" uid="uid://dvs61dly0v7hn" path="res://Scenes/Misc/LevelSprites.tscn" id="2_14ol8"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" path="res://Scenes/Misc/Barrel.tscn" id="13_mtdsf"]
 [ext_resource type="PackedScene" path="res://Scenes/Characters/Person2b.tscn" id="14_r8w5k"]
 [ext_resource type="PackedScene" path="res://Scenes/Characters/Person2d.tscn" id="15_p12sv"]
+[ext_resource type="PackedScene" uid="uid://b2mcxg3snepm" path="res://Scenes/Misc/decor_no_collision/book_case.tscn" id="16_yte71"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_15smf"]
 size = Vector2(37.9701, 351.535)
@@ -195,3 +196,15 @@ position = Vector2(645.431, -466.966)
 
 [node name="Person1b3" parent="." instance=ExtResource("9_kqtow")]
 position = Vector2(590.195, -462.512)
+
+[node name="BookCase" parent="." instance=ExtResource("16_yte71")]
+position = Vector2(242.108, -217.611)
+
+[node name="BookCase2" parent="." instance=ExtResource("16_yte71")]
+position = Vector2(570.899, -217.611)
+
+[node name="BookCase3" parent="." instance=ExtResource("16_yte71")]
+position = Vector2(731.93, -443.813)
+
+[node name="BookCase4" parent="." instance=ExtResource("16_yte71")]
+position = Vector2(662.556, -443.392)
