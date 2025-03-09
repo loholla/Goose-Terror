@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dvs61dly0v7hn" path="res://Scenes/Misc/LevelSprites.tscn" id="1_34fwe"]
 [ext_resource type="PackedScene" uid="uid://c762xvilww2a8" path="res://Scenes/Misc/Door.tscn" id="2_e5106"]
 [ext_resource type="PackedScene" uid="uid://b2mcxg3snepm" path="res://Scenes/Misc/decor_no_collision/book_case.tscn" id="2_i5pwh"]
-[ext_resource type="PackedScene" uid="uid://seofeu8n0j2r" path="res://Scenes/Characters/Player.tscn" id="3_ntrbv"]
+[ext_resource type="PackedScene" uid="uid://csokrqiftxuw7" path="res://Scenes/Characters/Player.tscn" id="3_ntrbv"]
 [ext_resource type="PackedScene" uid="uid://ehf1f6betbdd" path="res://Scenes/Misc/decor_collision/chair_left.tscn" id="5_qg41p"]
 [ext_resource type="PackedScene" uid="uid://bfl52tshju2ev" path="res://Scenes/Misc/decor_collision/chair_right.tscn" id="6_ksvu8"]
 [ext_resource type="PackedScene" uid="uid://l4lilxukptjj" path="res://Scenes/Misc/decor_collision/table.tscn" id="7_hvqh0"]

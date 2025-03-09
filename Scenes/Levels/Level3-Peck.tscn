@@ -1,6 +1,6 @@
 [gd_scene load_steps=18 format=3 uid="uid://dbw4ymasb01nd"]
 
-[ext_resource type="PackedScene" uid="uid://seofeu8n0j2r" path="res://Scenes/Characters/Player.tscn" id="1_1c1fv"]
+[ext_resource type="PackedScene" uid="uid://csokrqiftxuw7" path="res://Scenes/Characters/Player.tscn" id="1_1c1fv"]
 [ext_resource type="PackedScene" uid="uid://dvs61dly0v7hn" path="res://Scenes/Misc/LevelSprites.tscn" id="2_14ol8"]
 [ext_resource type="PackedScene" uid="uid://b2mcxg3snepm" path="res://Scenes/Misc/decor_no_collision/book_case.tscn" id="2_i76m2"]
 [ext_resource type="PackedScene" uid="uid://c762xvilww2a8" path="res://Scenes/Misc/Door.tscn" id="3_3igph"]
@@ -94,6 +94,9 @@ position = Vector2(195.141, -96.088)
 
 [node name="ChairRight" parent="." instance=ExtResource("7_ng5t8")]
 position = Vector2(82.9019, -24.3047)
+
+[node name="ChairRight3" parent="." instance=ExtResource("7_ng5t8")]
+position = Vector2(93.7646, -24.1174)
 
 [node name="ChairLeft" parent="." instance=ExtResource("8_m318b")]
 position = Vector2(65.9749, -23.8592)
