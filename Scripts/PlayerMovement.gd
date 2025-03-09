@@ -64,7 +64,7 @@ func _physics_process(delta):
 			$BiteCooldown.start()
 	
 	# Dash skill. Currently not bound correctly.
-	if Input.is_mouse_button_pressed(MOUSE_BUTTON_RIGHT) and GameManager.skillDash:
+	if Input.is_action_just_pressed("Dash") and GameManager.skillDash:
 		if !dashCool:
 			dash = true
 			$DashTimer.start()

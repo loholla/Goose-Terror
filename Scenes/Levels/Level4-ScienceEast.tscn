@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bnjbe0sqchpc0"]
+[gd_scene load_steps=15 format=3 uid="uid://bnjbe0sqchpc0"]
 
 [ext_resource type="PackedScene" uid="uid://dvs61dly0v7hn" path="res://Scenes/Misc/LevelSprites.tscn" id="1_p2kvu"]
 [ext_resource type="PackedScene" uid="uid://c762xvilww2a8" path="res://Scenes/Misc/Door.tscn" id="2_jlxhg"]
@@ -12,6 +12,10 @@
 [ext_resource type="PackedScene" uid="uid://cb23wbn8nhqsw" path="res://Scenes/Characters/Person1c.tscn" id="10_8j7ts"]
 [ext_resource type="PackedScene" uid="uid://b2hjxi2nrnwpn" path="res://Scenes/Characters/Person2c.tscn" id="11_b1uou"]
 [ext_resource type="PackedScene" uid="uid://seofeu8n0j2r" path="res://Scenes/Characters/Player.tscn" id="12_qe0gc"]
+[ext_resource type="PackedScene" uid="uid://dhk3xsbhlautn" path="res://Scenes/Misc/level_fin.tscn" id="13_t5j3o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_opfis"]
+size = Vector2(20, 64)
 
 [node name="Level4-scienceEast" type="Node2D"]
 
@@ -139,3 +143,12 @@ position = Vector2(390, -33)
 
 [node name="Player" parent="." instance=ExtResource("12_qe0gc")]
 position = Vector2(-19, -116)
+
+[node name="LevelFin" parent="." instance=ExtResource("13_t5j3o")]
+position = Vector2(846, -16)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-44, -128)
+shape = SubResource("RectangleShape2D_opfis")

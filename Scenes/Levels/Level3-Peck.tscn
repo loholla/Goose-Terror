@@ -1,10 +1,10 @@
 [gd_scene load_steps=18 format=3 uid="uid://dbw4ymasb01nd"]
 
-[ext_resource type="PackedScene" uid="uid://csokrqiftxuw7" path="res://Scenes/Characters/Player.tscn" id="1_1c1fv"]
+[ext_resource type="PackedScene" uid="uid://seofeu8n0j2r" path="res://Scenes/Characters/Player.tscn" id="1_1c1fv"]
 [ext_resource type="PackedScene" uid="uid://dvs61dly0v7hn" path="res://Scenes/Misc/LevelSprites.tscn" id="2_14ol8"]
-[ext_resource type="PackedScene" path="res://Scenes/Misc/Door.tscn" id="3_3igph"]
-[ext_resource type="PackedScene" path="res://Scenes/Misc/WoodBarricade.tscn" id="4_w1s1r"]
-[ext_resource type="PackedScene" path="res://Scenes/Misc/DJSkillBook.tscn" id="5_lssa0"]
+[ext_resource type="PackedScene" uid="uid://c762xvilww2a8" path="res://Scenes/Misc/Door.tscn" id="3_3igph"]
+[ext_resource type="PackedScene" uid="uid://c0ovdowyxmv6f" path="res://Scenes/Misc/WoodBarricade.tscn" id="4_w1s1r"]
+[ext_resource type="PackedScene" uid="uid://dbfbmlgbcftis" path="res://Scenes/Misc/DJSkillBook.tscn" id="5_lssa0"]
 [ext_resource type="PackedScene" uid="uid://l4lilxukptjj" path="res://Scenes/Misc/decor_collision/table.tscn" id="6_uvh8l"]
 [ext_resource type="PackedScene" uid="uid://bfl52tshju2ev" path="res://Scenes/Misc/decor_collision/chair_right.tscn" id="7_ng5t8"]
 [ext_resource type="PackedScene" uid="uid://ehf1f6betbdd" path="res://Scenes/Misc/decor_collision/chair_left.tscn" id="8_m318b"]
@@ -34,9 +34,6 @@ position = Vector2(3.77698, -32.0669)
 
 [node name="DashSkillBook" parent="." instance=ExtResource("5_lssa0")]
 position = Vector2(-37.7012, -30.7717)
-
-[node name="Player" parent="." instance=ExtResource("1_1c1fv")]
-position = Vector2(-197.354, -32.6449)
 
 [node name="Table9" parent="." instance=ExtResource("6_uvh8l")]
 position = Vector2(114.232, -67.9073)
@@ -196,6 +193,7 @@ position = Vector2(645.431, -466.966)
 
 [node name="Person1b3" parent="." instance=ExtResource("9_kqtow")]
 position = Vector2(590.195, -462.512)
+
 
 [node name="BookCase" parent="." instance=ExtResource("16_yte71")]
 position = Vector2(242.108, -217.611)
