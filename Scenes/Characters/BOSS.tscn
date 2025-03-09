@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://0v2iv8la60h0"]
+
+[ext_resource type="Texture2D" uid="uid://dwqgl2dxm2w2d" path="res://Textures/Boss.jpg" id="1_73mqw"]
+[ext_resource type="Script" path="res://Scripts/BOSS.gd" id="1_glopq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pon3y"]
+size = Vector2(6, 6)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qil41"]
+size = Vector2(527, 515)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xq01t"]
+size = Vector2(240, 262)
+
+[node name="Boss" type="CharacterBody2D"]
+script = ExtResource("1_glopq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(3.05176e-05, 0)
+scale = Vector2(0.161668, 0.161668)
+texture = ExtResource("1_73mqw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 126)
+shape = SubResource("RectangleShape2D_pon3y")
+
+[node name="PlayerDetector" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetector"]
+position = Vector2(0.5, -128.5)
+shape = SubResource("RectangleShape2D_qil41")
+
+[node name="PlayerDies" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDies"]
+shape = SubResource("RectangleShape2D_xq01t")
+
+[connection signal="body_entered" from="PlayerDetector" to="." method="_on_player_detector_body_entered"]
+[connection signal="body_entered" from="PlayerDies" to="." method="_on_player_dies_body_entered"]
